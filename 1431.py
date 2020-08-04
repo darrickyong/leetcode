@@ -21,5 +21,12 @@
 
 class Solution:
     def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
-        max = max(candies)
-        filter(candies, )
+        maxCandy = max(candies)
+        for x in range(len(candies)):
+          if candies[x] + extraCandies >= maxCandy:
+            candies[x] = True
+          else:
+            candies[x] = False
+        return candies
+
+    
