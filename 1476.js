@@ -1,0 +1,51 @@
+/**
+ * @param {number[][]} rectangle
+ */
+
+var SubrectangleQueries = function (rectangle) {
+  this.rect = rectangle;
+};
+
+/** 
+ * @param {number} row1 
+ * @param {number} col1 
+ * @param {number} row2 
+ * @param {number} col2 
+ * @param {number} newValue
+ * @return {void}
+ */
+SubrectangleQueries.prototype.updateSubrectangle = function (row1, col1, row2, col2, newValue) {
+  for (let i = row1; i < row2 + 1; i++) {
+    for (let j = col1; j < col2 + 1; j++) {
+      this.rect[i][j] = newValue;
+    }
+  }
+};
+
+/** 
+ * @param {number} row 
+ * @param {number} col
+ * @return {number}
+ */
+SubrectangleQueries.prototype.getValue = function (row, col) {
+  return this.rect[row][col];
+};
+
+/**
+ * Your SubrectangleQueries object will be instantiated and called as such:
+ * var obj = new SubrectangleQueries(rectangle)
+ * obj.updateSubrectangle(row1,col1,row2,col2,newValue)
+ * var param_2 = obj.getValue(row,col)
+ */
+
+
+const rectangle = [
+  [1, 2, 1], 
+  [4, 3, 4], 
+  [3, 2, 1], 
+  [1, 1, 1]
+];
+var obj = new SubrectangleQueries(rectangle)
+var param_2 = obj.getValue(2, 0);
+console.log(param_2);
+// obj.updateSubrectangle(row1, col1, row2, col2, newValue)
