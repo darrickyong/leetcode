@@ -19,7 +19,7 @@
 // invalid route is if any pickup has not been delivered.
 
 
-const doordash = (arr) => {
+const validRoutes = (arr) => {
   const globalTracker = new Set();
   const pickedUpOrders = new Set();
 
@@ -61,12 +61,12 @@ const arr7 = ['P1', 'P2', 'D2']; // false
 const arr8 = ['P1', 'D1', 'P1', 'D1']; // false
 const arr9 = ['P1', 'P2', 'D2', 'D1']; // true
 
-console.log(doordash(arr1)); 
-console.log(doordash(arr2)); 
-console.log(doordash(arr3)); 
-console.log(doordash(arr4)); 
-console.log(doordash(arr5)); 
-console.log(doordash(arr6)); 
-console.log(doordash(arr7)); 
-console.log(doordash(arr8)); 
-console.log(doordash(arr9)); 
+console.log(validRoutes(arr1)); 
+console.log(validRoutes(arr2)); 
+console.log(validRoutes(arr3)); 
+console.log(validRoutes(arr4)); 
+console.log(validRoutes(arr5)); 
+console.log(validRoutes(arr6)); 
+console.log(validRoutes(arr7)); 
+console.log(validRoutes(arr8)); 
+console.log(validRoutes(arr9)); 
