@@ -1,5 +1,5 @@
-var maxWidthOfVerticalArea = function (points) {
-  const copyPoints = [...points].sort((a, b) => a[1] > b[1]);
+const maxWidthOfVerticalArea = (points) => {
+  const copyPoints = [...points].sort((a, b) => a[0] > b[0]);
   let maxWidth = 0;
   for (let i = 1; i < copyPoints.length; i++) {
     let left = copyPoints[i - 1];
