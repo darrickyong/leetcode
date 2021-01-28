@@ -12,7 +12,8 @@
 
 var groupAnagrams = function (strs) {
   const res = {};
-  const alpha = 'abcdefghijklmnopqrstuvwxyz';
+  // const alpha = 'abcdefghijklmnopqrstuvwxyz';
+  // const numbers = '0123456789';
   const a = 'a'.charCodeAt(0); // 97
 
   for (let i = 0; i < strs.length; i++) {
